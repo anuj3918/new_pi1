@@ -8,6 +8,7 @@ var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var gallery = require('./routes/gallery');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/gallery', gallery);
 app.use('/users', users);
 
 
