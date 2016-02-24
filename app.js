@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-var y;
+var clients = require(__dirname+"/public/javascripts/clients.js");
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var gallery = require('./routes/gallery');
 
 var app = express();
 
@@ -24,8 +25,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/gallery', gallery);
 app.use('/users', users);
 
+clients.getClientData();
 
 app.post('/', function (req, res) {
 
