@@ -1,18 +1,17 @@
-<div class="container margin-top">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-            <h3>Clients</h3>
-            <ul>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li><small>Lorem ipsum dolor sit amet</small></li>
-                <li id="project"><small>Lorem ipsum dolor sit amet</small></li>
+    <% for(var i=0; i < data.length; i++) { %>
+    <%=data[i].name%><hr>
+    <%=data[i].address%><hr>
+    <%=data[i].feedback%><hr><hr><hr><hr>
+    <% } %>
 
-            </ul>
-        </div>
-    </div>
-</div>
+
+</body>
+</html>
